@@ -1,0 +1,9 @@
+[packages]
+urllib3 = "<2"
+requests = "*"
+tabulate = "*"
+
+[requires]
+python_version = "3.12"
+
+[dev-packages]
