@@ -9,6 +9,7 @@ from models.users import UserEnumerator
 from models.licenses import LicenseEnumerator
 from models.relationships import enrich_license_and_user_data
 
+from dedicatedlab.compare import DLComparison
 
 def setup_client() -> HTBApiClient:
     """Setup API client with environment configuration."""
@@ -84,12 +85,16 @@ def main():
 
     # Fetch enriched data once
     licenses, users = enrich_license_and_user_data(client)
+    
+    # Compare dedicated lab licenses (Current vs Previous)
+    comparison = DLComparison(licenses).compare_logs()
+
 
     # Output
-    print_users_by_role(users)
-    print_license_summary(licenses)
-    print_license_assignments(licenses)
-    print_user_access(users)
+    # print_users_by_role(users)
+    # print_license_summary(licenses)
+    # print_license_assignments(licenses)
+    # print_user_access(users)
 
 
 if __name__ == "__main__":
