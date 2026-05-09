@@ -7,3 +7,6 @@ tabulate = "*"
 python_version = "3.12"
 
 [dev-packages]
+ruff = "*"
+black = "*"
+pre-commit = "*"

@@ -10,7 +10,7 @@ class LabEnumerator:
 
     def get_all_labs(self) -> List[Dict[str, str]]:
         def fetch_page(page: int):
-            return self.client.get("/api/ext/v1/licenses", params={"page": page})
+            return self.client.get(self.client.api_paths["licenses"], params={"page": page})
 
         raw_labs = paginated_fetch(fetch_page)
 

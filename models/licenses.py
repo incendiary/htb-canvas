@@ -1,6 +1,6 @@
-from typing import List, Dict
+from typing import Any, Dict, List
+
 from client import HTBApiClient
-from typing import Any
 from models.pagination import paginated_fetch
 # This class is responsible for enumerating licenses from the Hack The Box API.
 # curl -s \\n -H "Authorization: Bearer $HTB_TOKEN" \\n -H "Accept: application/json" \\n "https://enterprise.hackthebox.com/api/ext/v1/licenses" |jq

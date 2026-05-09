@@ -18,29 +18,22 @@ class SSLAdapter(HTTPAdapter):
 
 
 class HTBApiClient:
-    """
-    This class is responsible for making API requests to the Hack The Box API.
-    It handles authentication, session management, and error handling.
+    """Makes API requests to the Hack The Box API with authentication and error handling."""
 
-    """
-
-
-    def __init__(self, HTB_TOKEN: str, BASE_URL: str, API_PATHS: dict):
-        self.token = HTB_TOKEN
-        self.base_url = BASE_URL
+    def __init__(self, htb_token: str, base_url: str, api_paths: dict):
+        self.token = htb_token
+        self.base_url = base_url
         self.session = requests.Session()
         self.session.headers.update({
             "Authorization": f"Bearer {self.token}",
             "Accept": "application/json"
         })
         self.session.mount("https://", SSLAdapter())
-        self.api_paths = API_PATHS
+        self.api_paths = api_paths
 
     def get(self, endpoint: str, params=None):
         url = f"{self.base_url}{endpoint}"
-        print(f"GET: {url}")
-
-        print(f"→ GET {url} | Params: {params}")  # Optional: remove if too noisy
+        print(f"→ GET {url} | Params: {params}")
 
         try:
             response = self.session.get(url, params=params)

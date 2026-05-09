@@ -15,20 +15,20 @@ def setup_client() -> HTBApiClient:
     load_dotenv()
     load_dotenv(dotenv_path=".secret", override=True)
 
-    HTB_TOKEN = os.getenv("HTB_TOKEN")
-    BASE_URL = os.getenv("BASE_URL")
+    htb_token = os.getenv("HTB_TOKEN")
+    base_url = os.getenv("BASE_URL")
 
-    if not HTB_TOKEN or not BASE_URL:
+    if not htb_token or not base_url:
         raise RuntimeError("Missing HTB_TOKEN or BASE_URL")
 
-    API_PATHS = {
+    api_paths = {
         "licenses": os.getenv("API_PATH_LICENSES"),
         "users": os.getenv("API_PATH_USERS"),
         "channels": os.getenv("API_PATH_CHANNELS"),
         "academy_modules": os.getenv("API_PATH_ACADEMY_MODULES"),
     }
 
-    return HTBApiClient(HTB_TOKEN=HTB_TOKEN, BASE_URL=BASE_URL, API_PATHS=API_PATHS)
+    return HTBApiClient(htb_token=htb_token, base_url=base_url, api_paths=api_paths)
 
 
 def print_users_by_role(users: list[dict]):

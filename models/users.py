@@ -6,8 +6,6 @@ UserDict = Dict[str, Any]
 
 class UserEnumerator:
     """Responsible for enumerating users from the Hack The Box API."""
-    """ This class is responsible for enumerating users from the Hack The Box API.
-    example curl: curl -s \\n -H "Authorization: Bearer $HTB_TOKEN" \\n -H "Accept: application/json" \\n "https://enterprise.hackthebox.com/api/ext/v1/users?per_page=100&page=1" | jq"""
 
     def __init__(self, client: HTBApiClient):
         self.client = client

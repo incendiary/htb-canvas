@@ -1,1 +1,9 @@
 .secret
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+Pipfile.lock
+.ruff_cache/
+.mypy_cache/
