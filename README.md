@@ -100,6 +100,7 @@ This will:
 | [#2](https://github.com/incendiary/htb-canvas/issues/2) | ✅ Closed | PEP 8 compliance and bug fixes |
 | [#3](https://github.com/incendiary/htb-canvas/issues/3) | ✅ Closed | Ruff, Black, and pre-commit pipeline |
 | [#4](https://github.com/incendiary/htb-canvas/issues/4) | 🔄 Open | Professional README and architectural overview |
+| [#6](https://github.com/incendiary/htb-canvas/issues/6) | 🔄 Open | Unit test suite for pagination, enrichment, and HTTP client |
 
 ### Security Hardening
 
