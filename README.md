@@ -89,6 +89,7 @@ This will:
 ## 📎 Notes
 
 * Do not share API tokens or `.secret` files.
+* This project was built with heavy assistance from [Claude Code](https://claude.com/claude-code). Things should work, but some paths haven't been fully verified end-to-end — PRs and fixes are very welcome.
 
 ---
 
