@@ -94,21 +94,28 @@ This will:
 
 ## 🗺️ Roadmap
 
+| Issue | Status | Description |
+|-------|--------|-------------|
+| [#1](https://github.com/incendiary/htb-canvas/issues/1) | ✅ Closed | Secret scanning and git history audit |
+| [#2](https://github.com/incendiary/htb-canvas/issues/2) | ✅ Closed | PEP 8 compliance and bug fixes |
+| [#3](https://github.com/incendiary/htb-canvas/issues/3) | ✅ Closed | Ruff, Black, and pre-commit pipeline |
+| [#4](https://github.com/incendiary/htb-canvas/issues/4) | 🔄 Open | Professional README and architectural overview |
+
 ### Security Hardening
 
 - [x] Secrets separated from code — API token loaded from `.secret` (gitignored), non-sensitive config in `.env`
-- [x] Git history audited — no credentials in commit history
+- [x] Git history audited — no credentials in commit history ([#1](https://github.com/incendiary/htb-canvas/issues/1))
 - [x] `.gitignore` expanded to cover `__pycache__`, `.venv`, `Pipfile.lock`, and tool caches
+- [x] Branch protection enabled on `main` — no force pushes, no deletions
 
-### Linting & Formatting
+### Linting & Formatting ([#3](https://github.com/incendiary/htb-canvas/issues/3))
 
 - [x] `pyproject.toml` configured with [Ruff](https://docs.astral.sh/ruff/) (linter) and [Black](https://black.readthedocs.io/) (formatter)
 - [x] Ruff enforces PEP 8 (`E`, `F`, `W`) and import ordering (`I`)
-- [x] Install dev tools: `pipenv install --dev`
 - [ ] Run linter: `pipenv run ruff check .`
 - [ ] Run formatter: `pipenv run black .`
 
-### Pre-commit Pipeline
+### Pre-commit Pipeline ([#3](https://github.com/incendiary/htb-canvas/issues/3))
 
 - [x] `.pre-commit-config.yaml` configured with:
   - **GitLeaks** — scans for accidentally committed secrets
