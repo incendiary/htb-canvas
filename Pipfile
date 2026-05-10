@@ -1,0 +1,14 @@
+[packages]
+urllib3 = "<2"
+requests = "*"
+tabulate = "*"
+
+[requires]
+python_version = "3.12"
+
+[dev-packages]
+ruff = "*"
+black = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-mock = "*"
